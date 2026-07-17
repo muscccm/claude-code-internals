@@ -88,7 +88,6 @@ Use the optional `preview` field on options when presenting concrete artifacts t
 
 Preview content is rendered as markdown in a monospace box. Multi-line text with newlines is supported. When any option has a preview, the UI switches to a side-by-side layout with a vertical option list on the left and preview on the right. Do not use previews for simple preference questions where labels and descriptions suffice. Note: previews are only supported for single-select questions (not multiSelect).
 
-
 **input_schema:**
 
 ```json
@@ -561,7 +560,6 @@ Important:
 - Do not invoke a skill that is already running
 - Do not use this tool for built-in CLI commands (like /help, /clear, etc.)
 - If you see a <command-name> tag in the current conversation turn, the skill has ALREADY been loaded - follow the instructions directly instead of calling this tool again
-
 
 **input_schema:**
 

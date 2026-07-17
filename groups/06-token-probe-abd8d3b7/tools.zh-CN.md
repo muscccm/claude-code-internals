@@ -442,7 +442,6 @@
 - 如果不确定是否使用，宁可选择规划——事先达成一致好过返工
 - 在对代码库做重大改动之前征询用户意见，用户会很感激
 
-
 **input_schema:**
 
 ```json
@@ -491,7 +490,6 @@
 - `name`（可选）：新 worktree 的名称。如果 `name` 和 `path` 都未提供，则生成一个随机名称。
 - `path`（可选）：要进入的已存在 worktree 的路径，而不是新建一个——可以是当前仓库的，或者（从启动目录首次进入时）多仓库工作区中嵌套仓库的。与 `name` 互斥。
 
-
 **input_schema:**
 
 ```json
@@ -536,7 +534,6 @@
 1. 初始任务："Search for and understand the implementation of vim mode in the codebase"——不要使用 exit plan mode 工具，因为你不是在规划任务的实现步骤。
 2. 初始任务："Help me implement yank mode for vim"——在完成该任务实现步骤的规划之后，使用 exit plan mode 工具。
 3. 初始任务："Add a new feature to handle user authentication"——如果对认证方式（OAuth、JWT 等）不确定，先使用 AskUserQuestion，澄清方案后再使用 exit plan mode 工具。
-
 
 **input_schema:**
 
@@ -605,7 +602,6 @@
 - 清除依赖于 CWD 的缓存（系统提示词各节、memory 文件、plans 目录），使会话状态反映原目录
 - 如果有 tmux 会话挂在该 worktree 上：`remove` 时将其杀死，`keep` 时保持运行（会返回其名称，以便用户重新接入）
 - 退出后，可以再次调用 EnterWorktree 创建全新的 worktree
-
 
 **input_schema:**
 
@@ -713,7 +709,6 @@
 ## reason 字段
 
 用一句简短的话说明你选择了什么以及为什么。它会进入遥测并展示给用户。"watching CI run" 好过 "waiting"。用户通过这句话理解你在做什么，而不必预先猜测你的节奏——写得具体一些。
-
 
 **input_schema:**
 
@@ -829,7 +824,6 @@
 - 创建任务后，如有需要，使用 TaskUpdate 设置依赖关系（blocks/blockedBy）
 - 先查看 TaskList，避免创建重复任务
 
-
 **input_schema:**
 
 ```json
@@ -889,7 +883,6 @@
 - 获取任务后，在开始工作前验证其 blockedBy 列表为空。
 - 使用 TaskList 以摘要形式查看所有任务。
 
-
 **input_schema:**
 
 ```json
@@ -930,7 +923,6 @@
 - **blockedBy**：必须先解决的未完成任务 ID 列表（带有 blockedBy 的任务在依赖解决之前无法被认领）
 
 使用 TaskGet 并指定任务 ID，可查看包括描述和评论在内的完整详情。
-
 
 **input_schema:**
 
@@ -998,7 +990,6 @@
 - 要停止以某个名称生成的后台 agent，将该名称作为 task_id 传入
 - 返回成功或失败状态
 - 当你需要终止一个长时间运行的任务时使用此工具
-
 
 **input_schema:**
 
@@ -1095,7 +1086,6 @@
 ```json
 {"taskId": "2", "addBlockedBy": ["1"]}
 ```
-
 
 **input_schema:**
 

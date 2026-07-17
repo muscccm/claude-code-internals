@@ -88,7 +88,6 @@ Use the optional `preview` field on options when presenting concrete artifacts t
 
 Preview content is rendered as markdown in a monospace box. Multi-line text with newlines is supported. When any option has a preview, the UI switches to a side-by-side layout with a vertical option list on the left and preview on the right. Do not use previews for simple preference questions where labels and descriptions suffice. Note: previews are only supported for single-select questions (not multiSelect).
 
-
 **input_schema:**
 
 ```json
@@ -738,7 +737,6 @@ User: "What files handle routing?"
 - If unsure whether to use it, err on the side of planning - it's better to get alignment upfront than to redo work
 - Users appreciate being consulted before significant changes are made to their codebase
 
-
 **input_schema:**
 
 ```json
@@ -787,7 +785,6 @@ Switching with `path` also works when the session is already in a worktree (the 
 - `name` (optional): A name for a new worktree. If neither `name` nor `path` is provided, a random name is generated.
 - `path` (optional): Path to an existing worktree to enter instead of creating one — of the current repository, or (on first entry from the launch directory) of a repository nested inside it. Mutually exclusive with `name`.
 
-
 **input_schema:**
 
 ```json
@@ -832,7 +829,6 @@ Ensure your plan is complete and unambiguous:
 1. Initial task: "Search for and understand the implementation of vim mode in the codebase" - Do not use the exit plan mode tool because you are not planning the implementation steps of a task.
 2. Initial task: "Help me implement yank mode for vim" - Use the exit plan mode tool after you have finished planning the implementation steps of the task.
 3. Initial task: "Add a new feature to handle user authentication" - If unsure about auth method (OAuth, JWT, etc.), use AskUserQuestion first, then use exit plan mode tool after clarifying the approach.
-
 
 **input_schema:**
 
@@ -901,7 +897,6 @@ If called outside an EnterWorktree session, the tool is a **no-op**: it reports 
 - Clears CWD-dependent caches (system prompt sections, memory files, plans directory) so the session state reflects the original directory
 - If a tmux session was attached to the worktree: killed on `remove`, left running on `keep` (its name is returned so the user can reattach)
 - Once exited, EnterWorktree can be called again to create a fresh worktree
-
 
 **input_schema:**
 
@@ -1255,7 +1250,6 @@ The runtime clamps to [60, 3600], so you don't need to clamp yourself.
 
 One short sentence on what you chose and why. Goes to telemetry and is shown back to the user. "watching CI run" beats "waiting." The user reads this to understand what you're doing without having to predict your cadence in advance — make it specific.
 
-
 **input_schema:**
 
 ```json
@@ -1350,7 +1344,6 @@ Important:
 - Do not use this tool for built-in CLI commands (like /help, /clear, etc.)
 - If you see a <command-name> tag in the current conversation turn, the skill has ALREADY been loaded - follow the instructions directly instead of calling this tool again
 
-
 **input_schema:**
 
 ```json
@@ -1415,7 +1408,6 @@ All tasks are created with status `pending`.
 - After creating tasks, use TaskUpdate to set up dependencies (blocks/blockedBy) if needed
 - Check TaskList first to avoid creating duplicate tasks
 
-
 **input_schema:**
 
 ```json
@@ -1475,7 +1467,6 @@ Returns full task details:
 - After fetching a task, verify its blockedBy list is empty before beginning work.
 - Use TaskList to see all tasks in summary form.
 
-
 **input_schema:**
 
 ```json
@@ -1516,7 +1507,6 @@ Returns a summary of each task:
 - **blockedBy**: List of open task IDs that must be resolved first (tasks with blockedBy cannot be claimed until dependencies resolve)
 
 Use TaskGet with a specific task ID to view full details including description and comments.
-
 
 **input_schema:**
 
@@ -1584,7 +1574,6 @@ DEPRECATED: Background tasks return their output file path in the tool result, a
 - To stop a background agent spawned with a name, pass that name as task_id
 - Returns a success or failure status
 - Use this tool when you need to terminate a long-running task
-
 
 **input_schema:**
 
@@ -1681,7 +1670,6 @@ Set up task dependencies:
 ```json
 {"taskId": "2", "addBlockedBy": ["1"]}
 ```
-
 
 **input_schema:**
 

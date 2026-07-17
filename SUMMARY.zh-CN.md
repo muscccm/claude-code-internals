@@ -1,6 +1,6 @@
-# PrismCat 抓取提示词详细总结
+# Claude Code 提示词与工具详细总结
 
-> 基于 2026-07-17 通过 PrismCat 透明代理抓取的 234 条 Claude Code 请求。
+> 基于 2026-07-17 的 234 条 Claude Code 请求（cc_version=2.1.209）。
 > 原文见各组文件夹（`*-zh.md` 为中文译文）。本文档详细解释每段提示词、每个工具的**具体用途**。
 
 ---
@@ -54,8 +54,7 @@ Claude Code 有一套跨会话的文件记忆：
 
 每次请求都附带当前运行环境，让模型生成的命令/路径符合实际：
 
-- 主工作目录（`D:\Projects\<project>`）、是否 git 仓库（false）、平台（win32）、
-  shell（bash）、OS 版本（Windows 11 Pro for Workstations）；
+- 主工作目录、是否 git 仓库、平台、shell、OS 版本；
 - 当前模型 ID（`claude-fable-5[1m]`）、知识截止日期（2026-01）、最新模型列表
   （告诉模型"你自己是最新的 Fable 5"，避免它自称旧型号）；
 - 当前日期（2026-07-17）——搜索时效性内容时用。
@@ -223,7 +222,7 @@ Claude Code 的 `/context` 命令会显示上下文构成（系统提示词 X to
 ### 07 组补充
 
 123 条里绝大多数是上述片段探测（`max_tokens=1`），另有少数 `max_tokens=16` 的
-是部署验证时用 curl 手工发的测试请求（user-agent 是 `curl/8.21.0`）。
+是手工测试请求（user-agent 是 `curl/8.21.0`）。
 
 ---
 

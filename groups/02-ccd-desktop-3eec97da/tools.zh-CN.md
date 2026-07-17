@@ -88,7 +88,6 @@
 
 预览内容会以 markdown 形式渲染在等宽字体框中，支持带换行的多行文本。当任一选项带有预览时，UI 会切换为左右并排布局：左侧是纵向选项列表，右侧是预览。对于仅靠标签和描述就足够说明的简单偏好类问题，不要使用预览。注意：预览仅支持单选问题（不支持 multiSelect）。
 
-
 **input_schema:**
 
 ```json
@@ -738,7 +737,6 @@
 - 如果不确定是否使用，倾向于做计划——事先对齐方向总好过返工
 - 在对代码库做重大改动之前征询用户意见，用户会很感激
 
-
 **input_schema:**
 
 ```json
@@ -787,7 +785,6 @@
 - `name`（可选）：新 worktree 的名称。如果 `name` 和 `path` 都未提供，则生成一个随机名称。
 - `path`（可选）：要进入的已存在 worktree 的路径，而不是创建新的——可以是当前仓库的，或者（从启动目录首次进入时）嵌套在其中的某个仓库的。与 `name` 互斥。
 
-
 **input_schema:**
 
 ```json
@@ -832,7 +829,6 @@
 1. 初始任务："搜索并理解代码库中 vim 模式的实现"——不要使用 exit plan mode 工具，因为你不是在规划任务的实现步骤。
 2. 初始任务："帮我为 vim 实现 yank 模式"——在你完成该任务实现步骤的规划之后，使用 exit plan mode 工具。
 3. 初始任务："添加一个处理用户认证的新功能"——如果对认证方式（OAuth、JWT 等）不确定，先使用 AskUserQuestion，澄清方案后再使用 exit plan mode 工具。
-
 
 **input_schema:**
 
@@ -900,7 +896,6 @@
 - 清除依赖 CWD 的缓存（系统提示词片段、memory 文件、plans 目录），使会话状态反映原始目录
 - 如果有 tmux 会话附加在该 worktree 上：`remove` 时将其杀掉，`keep` 时保持运行（会返回其名称，以便用户重新接入）
 - 退出之后，可以再次调用 EnterWorktree 创建一个全新的 worktree
-
 
 **input_schema:**
 
@@ -1254,7 +1249,6 @@
 
 用一句简短的话说明你选择了什么以及为什么。它会进入遥测并展示给用户。"watching CI run" 好过 "waiting"。用户通过这句话理解你在做什么，而不必预先猜测你的节奏——写得具体一点。
 
-
 **input_schema:**
 
 ```json
@@ -1349,7 +1343,6 @@
 - 不要将本工具用于内置 CLI 命令（如 /help、/clear 等）
 - 如果你在当前对话轮次中看到 <command-name> 标签，说明该 skill 已经被加载——直接按照其指令执行，不要再调用本工具
 
-
 **input_schema:**
 
 ```json
@@ -1414,7 +1407,6 @@
 - 创建任务后，如有需要，使用 TaskUpdate 建立依赖关系（blocks/blockedBy）
 - 先查看 TaskList，避免创建重复任务
 
-
 **input_schema:**
 
 ```json
@@ -1474,7 +1466,6 @@
 - 获取任务后，在开始工作前确认其 blockedBy 列表为空。
 - 使用 TaskList 以摘要形式查看所有任务。
 
-
 **input_schema:**
 
 ```json
@@ -1515,7 +1506,6 @@
 - **blockedBy**：必须先解决的开放任务 ID 列表（有 blockedBy 的任务在依赖解决前无法被认领）
 
 使用 TaskGet 并指定任务 ID 可查看完整详情，包括描述和评论。
-
 
 **input_schema:**
 
@@ -1583,7 +1573,6 @@
 - 要停止以某个名字 spawn 的后台 agent，将该名字作为 task_id 传入
 - 返回成功或失败状态
 - 当你需要终止一个长时间运行的任务时使用本工具
-
 
 **input_schema:**
 
@@ -1680,7 +1669,6 @@
 ```json
 {"taskId": "2", "addBlockedBy": ["1"]}
 ```
-
 
 **input_schema:**
 

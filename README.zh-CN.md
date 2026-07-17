@@ -1,7 +1,7 @@
 # Claude Code Internals（内部机制剖析）
 
-**Claude Code 每次请求到底发了什么：完整的系统提示词、全部 58 个工具定义、
-以及它的 token 统计行为——来自真实流量抓包，中英双语整理。**
+**Claude Code 的完整系统提示词、全部 58 个工具定义、以及 token 统计行为——
+中英双语文档。**
 
 [English README](README.md) · [详细解读](SUMMARY.zh-CN.md) · [Detailed analysis](SUMMARY.md)
 
@@ -13,10 +13,9 @@
 |------|------|
 | [SUMMARY.zh-CN.md](SUMMARY.zh-CN.md) | 中文版详细解读（提示词逐章 + 58 个工具逐个） |
 | [SUMMARY.md](SUMMARY.md) | 英文版详细解读 |
-| [groups/](groups/) | 原始抓取内容，每组"提示词+工具组合"一个文件夹 |
-| [extract_prompts.py](extract_prompts.py) | 提取脚本——可以对着你自己的 PrismCat 实例复现 |
+| [groups/](groups/) | 提示词与工具内容，每个唯一组合一个文件夹 |
 
-每个组的文件夹里都有英文原文 + 中文译文（`*.zh-CN.md`），以及抓取元数据 `meta.json`。
+每个组的文件夹里都有英文原文 + 中文译文（`*.zh-CN.md`），以及基础统计 `meta.json`。
 
 ## 核心发现
 
@@ -33,18 +32,13 @@
 6. **不同构建版本的客户端发送的提示词逐字相同**——只有构建号（`cc_version`）
    和模型 ID 字符串不同。
 
-## 抓取方法
+## 为什么全是 Anthropic 格式？
 
-全部流量由自托管透明代理 [PrismCat](https://github.com/paopaoandlingyia/PrismCat)
-抓取（部署在家庭 NAS 上）：
-
-```
-Claude Code → 本地供应商切换代理 → PrismCat（记录全部流量）→ LLM 端点
-```
-
-PrismCat 只需修改客户端的 `base_url`，即可把完整请求/响应（含 SSE 流）记录到本地
-数据库，完全不修改请求——你看到的就是客户端实际发送的内容。本仓库的
-`extract_prompts.py` 可以对任何 PrismCat 实例复现整个提取过程（分组、去重、生成文档）。
+Claude Code 是 Anthropic 基于 Anthropic Messages API 构建的。即使你把它指向其他
+LLM 端点，**客户端构造的仍然是 Anthropic 格式的请求**——Anthropic 的系统提示词结构、
+Anthropic 的工具定义、Anthropic 的 `thinking` 字段——然后依赖端点（或其前面的网关）
+来翻译或接受这种格式。所以本仓库里的内容是由**客户端**决定的，与最终回答的模型无关：
+`groups/` 里的提示词和工具定义天然就是 Anthropic 风格的。
 
 ## 目录结构
 
@@ -52,8 +46,7 @@ PrismCat 只需修改客户端的 `base_url`，即可把完整请求/响应（�
 ├── README.md / README.zh-CN.md     ← 本文件（英/中）
 ├── SUMMARY.md / SUMMARY.zh-CN.md   ← 详细解读（英/中）
 ├── LICENSE                         ← CC-BY-4.0
-├── extract_prompts.py              ← 提取脚本
-└── groups/                         ← 原始抓取
+└── groups/                         ← 提示词与工具内容
     ├── 01-ccd-desktop-a5fb6def/    ← 27K 通用代理提示词（标题生成进程）
     ├── 02-ccd-desktop-3eec97da/    ← ★ 主提示词 + 58 工具 + skills
     ├── 03/04-ccd-desktop-*/        ← 02 的构建变体
@@ -64,8 +57,8 @@ PrismCat 只需修改客户端的 `base_url`，即可把完整请求/响应（�
 
 ## 声明与许可
 
-- 抓取的系统提示词与工具定义属于 **Anthropic 的知识产权**，来自作者自己的客户端流量，
-  **仅供学习研究**；内容随版本变化（抓取自 `cc_version=2.1.209`）。如 Anthropic
-  认为本仓库不妥，将应要求下架。
-- 本文档的解读、总结、翻译与提取脚本 © 仓库作者，以 [CC-BY-4.0](LICENSE) 授权。
-- 抓取内容中的个人路径与标识已替换为 `<占位符>`。
+- 系统提示词与工具定义属于 **Anthropic 的知识产权**，**仅供学习研究**；
+  内容随版本变化（来自 `cc_version=2.1.209`）。如 Anthropic 认为本仓库不妥，
+  将应要求下架。
+- 本仓库的解读、总结与翻译 © 仓库作者，以 [CC-BY-4.0](LICENSE) 授权。
+- 内容中的个人路径与标识已替换为 `<占位符>`。

@@ -21,7 +21,6 @@
 - 不要将此工具用于内置 CLI 命令（如 /help、/clear 等）
 - 如果你在当前对话回合中看到 <command-name> 标签，说明该 skill 已经被加载——直接按照其指令执行，而不是再次调用此工具
 
-
 **input_schema:**
 
 ```json

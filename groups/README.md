@@ -1,8 +1,8 @@
-# Captured Groups Index
+# Groups Index
 
-> 234 captured requests deduplicated into 9 unique (system prompt + tools) combinations.
+> 234 requests deduplicated into 9 unique (system prompt + tools) combinations.
 > Each group folder holds the English originals, Chinese translations (`*.zh-CN.md`),
-> and a `meta.json` with capture metadata.
+> and a `meta.json` with basic statistics.
 >
 > [中文索引](README.zh-CN.md)
 
@@ -29,7 +29,7 @@
 - **05** — Token-counting probe carrying only the **Skill** tool (its description changes
   as skills load, so it is weighed separately).
 - **06** — Probe carrying the 19 **extended built-in** tools.
-- **07** — Fragment probes (no system, no tools) plus a few manual curl test requests.
+- **07** — Fragment probes (no system, no tools) plus a few manual test requests.
 - **08** — Probe carrying the 28 **MCP** tools.
 - **09** — Probe carrying the 11 **core** tools.
 

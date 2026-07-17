@@ -1,8 +1,9 @@
 # Claude Code Internals — Detailed Analysis
 
-> Based on 234 Claude Code requests captured on 2026-07-17 via a PrismCat transparent proxy.
-> For the original captures see the per-group folders (`*.zh-CN.md` files are the Chinese translations).
-> This document explains **what every prompt section and every tool actually does**.
+> A detailed look at Claude Code's prompts and tools, based on 234 requests from
+> `cc_version=2.1.209` (2026-07-17). For the original content see the per-group
+> folders (`*.zh-CN.md` files are the Chinese translations). This document explains
+> **what every prompt section and every tool actually does**.
 >
 > [中文版本](SUMMARY.zh-CN.md)
 
@@ -232,8 +233,7 @@ tools Y tokens, history Z tokens, free space left). To produce that breakdown it
 ### Group 07 addendum
 
 Most of its 123 requests are the fragment probes above (`max_tokens=1`); a few
-`max_tokens=16` ones are manual curl test requests from deployment verification
-(user-agent `curl/8.21.0`).
+`max_tokens=16` ones are manual test requests (user-agent `curl/8.21.0`).
 
 ---
 

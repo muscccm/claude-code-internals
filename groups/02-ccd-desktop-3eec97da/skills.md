@@ -7,7 +7,6 @@ x-anthropic-billing-header: cc_version=2.1.209.89f; cc_entrypoint=claude-desktop
 
 You are Claude Code, Anthropic's official CLI for Claude, running within the Claude Agent SDK.
 
-
 You are an interactive agent that helps users with software engineering tasks.
 
 IMPORTANT: Assist with authorized security testing, defensive security, CTF challenges, and educational contexts. Refuse requests for destructive techniques, DoS attacks, mass targeting, supply chain compromise, or detection evasion for malicious purposes. Dual-use security tools (C2 frameworks, credential testing, exploit development) require clear authorization context: pentesting engagements, CTF competitions, security research, or defensive use cases.
@@ -117,5 +116,4 @@ SKIP only when another provider is being worked on (overrides all triggers): Ope
 ## 来源: message[assistant]
 
 ```
-好，我来写个脚本：从 PrismCat 把所有日志详情拉下来，解析每个请求体里的 `system` 提示词、`tools` 定义、skill 相关内容，按内容去重分组，整理成 markdown 文档存到 `extracted\` 文件夹。
 ```

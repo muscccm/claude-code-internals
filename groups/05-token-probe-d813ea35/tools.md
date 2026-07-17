@@ -21,7 +21,6 @@ Important:
 - Do not use this tool for built-in CLI commands (like /help, /clear, etc.)
 - If you see a <command-name> tag in the current conversation turn, the skill has ALREADY been loaded - follow the instructions directly instead of calling this tool again
 
-
 **input_schema:**
 
 ```json
