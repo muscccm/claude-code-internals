@@ -1,4 +1,4 @@
-# 系统提示词（main-prompt-build-fable5）
+# System prompt (main-prompt-build-fable5)
 
 
 ---

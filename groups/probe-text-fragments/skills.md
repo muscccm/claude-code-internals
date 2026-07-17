@@ -1,6 +1,6 @@
-# Skill 相关内容（probe-text-fragments）
+# Skill-related content (probe-text-fragments)
 
-## 来源: message[user]
+## Source: message[user]
 
 ```
 # Session-specific guidance

@@ -1,4 +1,4 @@
-# 工具定义（main-prompt-build-fable5）—— 共 58 个
+# Tool definitions (main-prompt-build-fable5) — 58 tools
 
 ## `Agent`
 Launch a new agent to handle complex, multi-step tasks. Each agent type has specific capabilities and tools available to it.

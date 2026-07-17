@@ -1,4 +1,4 @@
-# 工具定义（main-prompt-and-tools）—— 共 58 个
+# Tool definitions (main-prompt-and-tools) — 58 tools
 
 ## `Agent`
 Launch a new agent to handle complex, multi-step tasks. Each agent type has specific capabilities and tools available to it.

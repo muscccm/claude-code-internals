@@ -1,4 +1,4 @@
-# 工具定义（probe-skill-tool）—— 共 1 个
+# Tool definitions (probe-skill-tool) — 1 tools
 
 ## `Skill`
 Execute a skill within the main conversation

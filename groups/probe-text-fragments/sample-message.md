@@ -1,4 +1,4 @@
-# 请求消息样本（probe-text-fragments）
+# Request message sample (probe-text-fragments)
 
 ---
 

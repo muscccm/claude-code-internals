@@ -1,4 +1,4 @@
-# 系统提示词（main-prompt-and-tools）
+# System prompt (main-prompt-and-tools)
 
 
 ---

@@ -1,4 +1,4 @@
-# 系统提示词（main-prompt-build-74d）
+# System prompt (main-prompt-build-74d)
 
 
 ---

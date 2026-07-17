@@ -1,4 +1,4 @@
-# 请求消息样本（probe-skill-tool）
+# Request message sample (probe-skill-tool)
 
 ---
 

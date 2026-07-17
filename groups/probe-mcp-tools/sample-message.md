@@ -1,4 +1,4 @@
-# 请求消息样本（probe-mcp-tools）
+# Request message sample (probe-mcp-tools)
 
 ---
 

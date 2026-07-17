@@ -1,4 +1,4 @@
-# 工具定义（probe-extended-tools）—— 共 19 个
+# Tool definitions (probe-extended-tools) — 19 tools
 
 ## `CronCreate`
 Schedule a prompt to be enqueued at a future time. Use for both recurring schedules and one-shot reminders.

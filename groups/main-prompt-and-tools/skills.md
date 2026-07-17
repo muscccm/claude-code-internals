@@ -1,6 +1,6 @@
-# Skill 相关内容（main-prompt-and-tools）
+# Skill-related content (main-prompt-and-tools)
 
-## 来源: system
+## Source: system
 
 ```
 x-anthropic-billing-header: cc_version=2.1.209.89f; cc_entrypoint=claude-desktop-3p;
@@ -74,7 +74,7 @@ You have been invoked in the following environment:
  - OS Version: Windows 11 Pro for Workstations 
 ```
 
-## 来源: message[system]
+## Source: message[system]
 
 ```
 Available agent types for the Agent tool:
@@ -113,7 +113,7 @@ TRIGGER — read BEFORE opening the target file; don't skip because it "looks li
 SKIP only when another provider is being worked on (overrides all triggers): OpenAI/GPT/Gemini/Llama/Mistral/Cohere/Ollama named in the query; OR `grep -rE 'openai|langchain_openai|google.gen
 ```
 
-## 来源: message[assistant]
+## Source: message[assistant]
 
 ```
 ```

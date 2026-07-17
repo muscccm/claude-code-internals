@@ -1,4 +1,4 @@
-# 工具定义（probe-mcp-tools）—— 共 28 个
+# Tool definitions (probe-mcp-tools) — 28 tools
 
 ## `mcp__ccd_directory__request_directory`
 Request access to a directory on the user's computer that is outside your current working directory. If you know the path, pass it — the user sees and approves it. If you omit `path`, a native folder picker opens. Use this whenever the user asks you to work with files you don't currently have access to.

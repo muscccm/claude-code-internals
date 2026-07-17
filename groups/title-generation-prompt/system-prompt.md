@@ -1,4 +1,4 @@
-# 系统提示词（title-generation-prompt）
+# System prompt (title-generation-prompt)
 
 
 ---

@@ -1,4 +1,4 @@
-# 工具定义（probe-core-tools）—— 共 11 个
+# Tool definitions (probe-core-tools) — 11 tools
 
 ## `Agent`
 Launch a new agent to handle complex, multi-step tasks. Each agent type has specific capabilities and tools available to it.
