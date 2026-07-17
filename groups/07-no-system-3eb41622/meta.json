@@ -1,0 +1,18 @@
+{
+  "hash": "3eb41622",
+  "label": "no-system",
+  "request_count": 123,
+  "max_tokens": [
+    1,
+    16
+  ],
+  "user_agents": [
+    "['Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Claude/1.22209.0 ",
+    "['claude-cli/2.1.209 (external, claude-desktop-3p, agent-sdk/0.3.209)']",
+    "['curl/8.21.0']"
+  ],
+  "first_seen": "2026-07-17T11:47:37.557319766Z",
+  "last_seen": "2026-07-17T10:13:51.236998251Z",
+  "system_chars": 0,
+  "tool_count": 0
+}
