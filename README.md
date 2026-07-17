@@ -57,12 +57,10 @@ inherently Anthropic-flavored, regardless of backend.
 ├── SUMMARY.md / SUMMARY.zh-CN.md   ← detailed analysis (EN) / Chinese version
 ├── LICENSE                         ← CC-BY-4.0
 └── groups/                         ← prompt & tool content
-    ├── 01-ccd-desktop-a5fb6def/    ← 27K general-agent prompt (title-gen process)
-    ├── 02-ccd-desktop-3eec97da/    ← ★ main prompt + 58 tools + skills
-    ├── 03/04-ccd-desktop-*/        ← build variants of 02
-    ├── 05-token-probe-*/           ← Skill-tool probe
-    ├── 06/08/09-token-probe-*/     ← tool-subset probes
-    └── 07-no-system-*/             ← text-fragment probes
+    ├── title-generation-prompt/    ← 27K general-agent prompt (title-gen process)
+    ├── main-prompt-and-tools/      ← ★ main prompt + 58 tools + skills
+    ├── main-prompt-build-*/        ← build variants of the main prompt
+    └── probe-*/                    ← token-counting probes (skill/extended/mcp/core/fragments)
 ```
 
 ## Disclaimer & license

@@ -1,0 +1,14 @@
+{
+  "label": "system-prompt",
+  "request_count": 58,
+  "max_tokens": [
+    64000
+  ],
+  "user_agents": [
+    "claude-cli/2.1.209 (external, claude-desktop-3p, agent-sdk/0.3.209)"
+  ],
+  "first_seen": "2026-07-17T11:09:12.78465974Z",
+  "last_seen": "2026-07-17T18:21:46.722510571Z",
+  "system_chars": 11445,
+  "tool_count": 58
+}

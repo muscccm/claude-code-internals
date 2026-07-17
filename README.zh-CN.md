@@ -47,12 +47,10 @@ Anthropic 的工具定义、Anthropic 的 `thinking` 字段——然后依赖端
 ├── SUMMARY.md / SUMMARY.zh-CN.md   ← 详细解读（英/中）
 ├── LICENSE                         ← CC-BY-4.0
 └── groups/                         ← 提示词与工具内容
-    ├── 01-ccd-desktop-a5fb6def/    ← 27K 通用代理提示词（标题生成进程）
-    ├── 02-ccd-desktop-3eec97da/    ← ★ 主提示词 + 58 工具 + skills
-    ├── 03/04-ccd-desktop-*/        ← 02 的构建变体
-    ├── 05-token-probe-*/           ← Skill 工具探针
-    ├── 06/08/09-token-probe-*/     ← 工具子集探针
-    └── 07-no-system-*/             ← 文本片段探针
+    ├── title-generation-prompt/    ← 27K 通用代理提示词（标题生成进程）
+    ├── main-prompt-and-tools/      ← ★ 主提示词 + 58 工具 + skills
+    ├── main-prompt-build-*/        ← 主提示词的构建变体
+    └── probe-*/                    ← token 计数探针（skill/扩展/MCP/核心/片段）
 ```
 
 ## 声明与许可
