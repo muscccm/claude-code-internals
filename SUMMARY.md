@@ -5,7 +5,7 @@
 > folders (`*.zh-CN.md` files are the Chinese translations). This document explains
 > **what every prompt section and every tool actually does**.
 >
-> [中文版本](SUMMARY.zh-CN.md)
+> [Chinese version](SUMMARY.zh-CN.md)
 
 ---
 

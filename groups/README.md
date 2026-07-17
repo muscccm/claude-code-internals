@@ -4,7 +4,7 @@
 > Each group folder holds the English originals, Chinese translations (`*.zh-CN.md`),
 > and a `meta.json` with basic statistics.
 >
-> [中文索引](README.zh-CN.md)
+> [Chinese index](README.zh-CN.md)
 
 | # | Label | Hash | System size | Tools | Requests | Folder |
 |---|-------|------|-------------|-------|----------|--------|

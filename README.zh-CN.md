@@ -3,7 +3,7 @@
 **Claude Code 的完整系统提示词、全部 58 个工具定义、以及 token 统计行为——
 中英双语文档。**
 
-[English README](README.md) · [详细解读](SUMMARY.zh-CN.md) · [Detailed analysis](SUMMARY.md)
+[English version](README.md) · [详细解读](SUMMARY.zh-CN.md)
 
 ---
 
